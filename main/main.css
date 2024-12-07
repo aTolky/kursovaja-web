@@ -11,6 +11,7 @@ body {
     background-color: #fff;
     border-bottom: 1px solid #ddd;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -38,10 +39,10 @@ body {
     background: linear-gradient(to right, #ff416c, #ff4b2b);
     color: #fff;
     border: none;
-    padding: 15px 40px;
+    padding: 15px 30px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 21px;
+    font-size: 18px;
 }
 
 .burger-menu {
@@ -81,7 +82,15 @@ body {
     font-size: 21px;
     width: 40%;
 }
-
+.call-buttonburger1{
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
 .mobile-nav a {
     display: flex;
     gap: 20px;
@@ -534,7 +543,9 @@ footer {
     font-size: 14px;
     margin-top: auto;
 }
-
+#footer-rights{
+    margin: 0;
+}
 @media (max-width: 1130px) {
     .container{
         flex-direction: column;

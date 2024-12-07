@@ -1,0 +1,39 @@
+.contact-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 70%;
+    gap: 100px;
+}
+.section-title{
+    color: #1B75BB;
+    font-size: 30px;
+    width: 100%;
+}
+.contact-map{
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+}
+#map {
+    height: 300px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.second-footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.promo-contact {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: start;
+    border-radius: 15px;
+    width: 80%;
+}
