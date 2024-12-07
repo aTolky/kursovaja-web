@@ -3,6 +3,10 @@ body {
     font-family: Arial, sans-serif;
     background-color: #F7F6FF;
 }
+body.dark {
+    background-color: #232325; 
+    color: #fff;
+  }
 .header {
     display: flex;
     justify-content: space-around;
@@ -13,7 +17,102 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
 }
-
+.dark .header{
+    background-color: #000; 
+    color: #fff;
+}
+.dark .nav-links a{
+    color: #fff;
+}
+.dark .logo img {
+    filter: invert(1);
+}
+.dark .call-button {
+    background: linear-gradient(to right, #c53653, #6e1f11);
+}
+.dark .call-buttonburger1{
+    background: linear-gradient(to right, #c53653, #6e1f11);
+}
+.dark .text-content h1{
+    color: #fff;
+}
+.dark .text-content h2{
+    color: #fff;
+}
+.dark .text-content p{
+    color: #fff;
+}
+.dark .text-content .buttons a {
+    background-color: #385363;
+}
+.dark .promo-block{
+    background-color: #000; 
+    color: #fff;
+}
+.dark .promo-block h1 {
+    color: #fff;
+}
+.dark .promo-item .highlight {
+    color: #fff;
+}
+.dark .services h1 {
+    color: #fff;
+}
+.dark .service-card{
+    background-color: #000; 
+    color: #fff;
+}
+.dark .service-header{
+    background-color: #385363;
+}
+.dark .service-card ul li {
+    color: #fff;
+}
+.dark .service-price {
+    color: #fff;
+}
+.dark .consultation-form h1 {
+    color: #fff;
+}
+.dark .consultation-form p {
+    color: #fff;
+}
+.dark .form-group label {
+    color: #fff;
+}
+.dark .service-button  {
+    background: linear-gradient(to right, #c53653, #6e1f11);
+}
+.dark .consultation button  {
+    background: linear-gradient(to right, #c53653, #6e1f11);
+}
+.dark footer {
+    background-color: #000; 
+    color: #fff;
+}
+.dark footer img {
+    filter: invert(1);
+}
+.dark .feedback-button{
+    background: linear-gradient(to right, #c53653, #6e1f11);
+}
+.dark .work-card{
+    background-color: #000; 
+    color: #fff;
+}
+.dark .work-results{
+    background-color: #232325; 
+    color: #fff;
+}
+.dark .work-card p {
+    color: #fff;
+}
+.dark .result strong {
+    color: #fff;
+}
+.dark .result span {
+    color: #fff;
+}
 .logo {
     display: flex;
     align-items: center;

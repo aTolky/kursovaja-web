@@ -26,16 +26,28 @@ function toggleLanguage() {
 }
 
 function applyTranslations(lang) {
-  var translation = translations[lang];
-
-  var elements = document.querySelectorAll('[id]');
-  elements.forEach(function(element) {
-    var translationKey = element.getAttribute('id');
-    if (translationKey && translation[translationKey]) {
-      element.innerHTML = translation[translationKey];
-    }
-  });
-}
+    var translation = translations[lang];
+  
+    var elements = document.querySelectorAll('[id]');
+    elements.forEach(function(element) {
+      var translationKey = element.getAttribute('id');
+      if (translationKey && translation[translationKey]) {
+        // Проверяем, есть ли вложенные элементы <strong> и заменяем только текст внутри них
+        if (element.querySelector('strong')) {
+          element.childNodes.forEach(function(node) {
+            if (node.nodeType === Node.TEXT_NODE) {
+              node.nodeValue = translation[translationKey];
+            } else if (node.tagName === 'STRONG' && translation[translationKey + '-value']) {
+              node.innerHTML = translation[translationKey + '-value'];
+            }
+          });
+        } else {
+          element.innerHTML = translation[translationKey];
+        }
+      }
+    });
+  }
+  
 
 loadTranslations().then(() => {
   var userLanguage = navigator.language.substr(0, 2); 
