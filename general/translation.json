@@ -107,7 +107,10 @@
         "service-sign-design": "Signage and Advertising Design",
         "service-tilda-design": "Tilda Website Design",
         "service-smm": "SMM",
-        "footer-rights": "© 2021 All rights reserved"
+        "footer-rights": "© 2021 All rights reserved",
+        "dei": "Select an action",
+        "login-button": "Authorization",
+        "register-button": "Registration"
     },
     "ru": {
         "home-link": "Главная",
@@ -217,6 +220,9 @@
         "service-sign-design": "Дизайн вывесок и рекламы",
         "service-tilda-design": "Дизайн сайтов на Тильде",
         "service-smm": "СММ",
-        "footer-rights": "© 2021 Все права защищены"
+        "footer-rights": "© 2021 Все права защищены",
+        "dei": "Выберите действие",
+        "login-button": "Авторизация",
+        "register-button": "Регистрация"
     }
 }

@@ -55,7 +55,16 @@
         <a id="contacts-link1" href="#">Контакты</a>
         <button id="call-buttonburger" class="call-buttonburger">Заказать звонок</button>
     </div>
-    
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="dei">Выберите действие</h2>
+        <button id="login-button" class="modal-button">Авторизация</button>
+        <button id="register-button" class="modal-button">Регистрация</button>
+    </div>
+</div>
+
     <main>
         <div id="main-container" class="container">
             <div id="text-content" class="text-content">
@@ -184,66 +193,16 @@
         <section class="works">
             <h1 id="works-title">НАШИ РАБОТЫ</h1>
             <div id="blocking-works" class="blocking-works">
-                <div id="left-image">
-                    <img src="../image/left.png" alt="Left">
+                <button class="carousel-btn" id="prev-btn">&#10094;</button>
+                <div id="work-cards-container">
+                    <div id="work-cards" class="work-cards"></div>
                 </div>
-                <div id="work-cards" class="work-cards">
-                    <div id="alibaba-work" class="work-card">
-                        <div id="alibaba-header" class="work-header">
-                            <img src="../image/AlibabaLogo.png" alt="Alibaba">
-                        </div>
-                        <p id="alibaba-description">Самая крупная в Финляндии компания по обработке камня и крупнейший в мире производитель теплоаккумулирующих печей каминов текст пример</p>
-                        <div id="alibaba-results" class="work-results">
-                            <div id="alibaba-result-1" class="result">
-                                <strong id="alibaba-strong-1">+ 85,71%</strong>
-                                <span id="alibaba-result-1-description">увеличение количества обращений с рекламы</span>
-                            </div>
-                            <div id="alibaba-result-2" class="result">
-                                <strong id="alibaba-strong-2">+ 83,51%</strong>
-                                <span id="alibaba-result-2-description">увеличение конверсии</span>
-                            </div>
-                            <div id="alibaba-result-3" class="result">
-                                <strong id="alibaba-strong-3">- 50,51%</strong>
-                                <span id="alibaba-result-3-description">снижение стоимости за обращение</span>
-                            </div>
-                        </div>
-                        <div id="alibaba-systems" class="systems">
-                            <span id="alibaba-systems-title">СИСТЕМЫ:</span>
-                            <img src="../image/google.png" alt="Google Ads">
-                            <img src="../image/yandex.png" alt="Yandex">
-                        </div>
-                    </div>
-                    <div id="macys-work" class="work-card">
-                        <div id="macys-header" class="work-header">
-                            <img src="../image/MacysLogo.png" alt="Macy's">
-                        </div>
-                        <p id="macys-description">Самая крупная в Финляндии компания по обработке камня и крупнейший в мире производитель теплоаккумулирующих печей каминов текст пример</p>
-                        <div id="macys-results" class="work-results">
-                            <div id="macys-result-1" class="result">
-                                <strong id="macys-strong-1">+ 85,71%</strong>
-                                <span id="macys-result-1-description">увеличение количества обращений с рекламы</span>
-                            </div>
-                            <div id="macys-result-2" class="result">
-                                <strong id="macys-strong-2">+ 83,51%</strong>
-                                <span id="macys-result-2-description">увеличение конверсии</span>
-                            </div>
-                            <div id="macys-result-3" class="result">
-                                <strong id="macys-strong-3">- 50,51%</strong>
-                                <span id="macys-result-3-description">снижение стоимости за обращение</span>
-                            </div>
-                        </div>
-                        <div id="macys-systems" class="systems">
-                            <span id="macys-systems-title">СИСТЕМЫ:</span>
-                            <img src="../image/google.png" alt="Google Ads">
-                            <img src="../image/yandex.png" alt="Yandex">
-                        </div>
-                    </div>
-                </div>
-                <div id="right-image">
-                    <img src="../image/right.png" alt="Right">
-                </div>
+                <button class="carousel-btn" id="next-btn">&#10095;</button>
             </div>
+            <div id="pagination" class="pagination"></div>
         </section>
+        
+        
         
     </main>
     <footer class="footer">
@@ -278,6 +237,9 @@
     <script src="../general/burger.js"></script>
     <script src="../general/translation.js"></script>
     <script src="../general/tema.js"></script>
+    <script src="./slider.js"></script>
+    <script src="../general/modal.js"></script>
+    <script src="../registration/script.js"></script>
 </body>
 </html>
 

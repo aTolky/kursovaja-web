@@ -1,0 +1,32 @@
+{
+    "works": [
+        {
+            "id": "alibaba-work",
+            "header": "Alibaba",
+            "description": "Самая крупная в Финляндии компания по обработке камня и крупнейший в мире производитель теплоаккумулирующих печей каминов текст пример",
+            "results": [
+                {"value": "+ 85,71%", "description": "увеличение количества обращений с рекламы"},
+                {"value": "+ 83,51%", "description": "увеличение конверсии"},
+                {"value": "- 50,51%", "description": "снижение стоимости за обращение"}
+            ],
+            "systems": [
+                {"img": "../image/google.png", "alt": "Google Ads"},
+                {"img": "../image/yandex.png", "alt": "Yandex"}
+            ]
+        },
+        {
+            "id": "macys-work",
+            "header": "Macys",
+            "description": "Самая крупная в Финляндии компания по обработке камня и крупнейший в мире производитель теплоаккумулирующих печей каминов текст пример",
+            "results": [
+                {"value": "+ 85,71%", "description": "увеличение количества обращений с рекламы"},
+                {"value": "+ 83,51%", "description": "увеличение конверсии"},
+                {"value": "- 50,51%", "description": "снижение стоимости за обращение"}
+            ],
+            "systems": [
+                {"img": "../image/google.png", "alt": "Google Ads"},
+                {"img": "../image/yandex.png", "alt": "Yandex"}
+            ]
+        }
+    ]
+}
