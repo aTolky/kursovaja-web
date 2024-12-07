@@ -12,23 +12,28 @@ body {
     border-bottom: 1px solid #ddd;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .logo {
     display: flex;
     align-items: center;
 }
+
 .logo img {
     width: 100%;
     margin-right: 10px;
 }
+
 .nav-links {
     display: flex;
     gap: 20px;
 }
+
 .nav-links a {
     text-decoration: none;
     color: #000;
     font-size: 21px;
 }
+
 .call-button {
     background: linear-gradient(to right, #ff416c, #ff4b2b);
     color: #fff;
@@ -39,6 +44,51 @@ body {
     font-size: 21px;
 }
 
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger-menu .line {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.call-buttonburger {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 21px;
+    width: 40%;
+}
+
+.mobile-nav a {
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 21px;
+}
 main{
     display: flex;
     justify-content: center;
@@ -430,7 +480,7 @@ button:hover {
     vertical-align: middle;
 }
 
-.footer {
+footer {
     background-color: #fff;
     padding: 40px 100px;
     display: flex;
@@ -483,4 +533,107 @@ button:hover {
     padding: 10px 0;
     font-size: 14px;
     margin-top: auto;
+}
+
+@media (max-width: 1130px) {
+    .container{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .service-cards{
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .burger-menu.active .line:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+    
+    .burger-menu.active .line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .burger-menu.active .line:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+    
+    .mobile-nav.active {
+        display: flex;
+    }
+    .call-button{
+        display: none;
+    }
+    footer{
+        flex-wrap: wrap;
+        padding: 40px 20px;
+    }
+}
+@media (max-width: 640px){ 
+    .text-content .buttons {
+        flex-direction: column;
+    }
+    .container{
+        padding: 0;
+    }
+    .promo-blocki{
+        flex-direction: column;
+        align-items: start;
+    }
+    .promo-block{
+        width: 60%;
+    }
+    .service-card{
+        width: 30%;
+    }
+    .consultation{
+        flex-direction: column;
+    }
+    .work-cards{
+        flex-direction: column;
+    }
+    .work-card{
+        width: 100%;
+    }
+    footer{
+        padding: 40px 5px;
+        flex-direction: column;
+    }
+    .call-buttonburger{
+        width: 80%;
+    }
+    .text-content .buttons a {
+        padding: 15px 20px;
+    }
+}
+@media (max-width: 400px){ 
+    .text-content h1 {
+        font-size: 32px;
+    }
+    .services h1 {
+        margin-left: 10px;
+    }
+    .text-content h2 {
+        font-size: 42px;
+    }
+    .consultation{
+        padding: 0;
+    }
+    .blocking-works{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .logo-section img{
+        width: 100%;
+    }
+    .service-card{
+        width: 50%;
+    }
 }
