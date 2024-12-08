@@ -8,9 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function displayWorks() {
         workCards.forEach((card, index) => {
-            card.style.display = 'none';
+            card.classList.remove('active'); // Удаляем класс active у всех карточек
             if (index >= currentIndex * itemsPerPage && index < (currentIndex + 1) * itemsPerPage) {
-                card.style.display = 'block';
+                setTimeout(() => {
+                    card.classList.add('active'); // Добавляем класс active с задержкой
+                }, 50 * (index % itemsPerPage)); // Добавляем задержку для каждой карточки
             }
         });
     }

@@ -221,29 +221,32 @@ document.addEventListener('DOMContentLoaded', () => {
             if (usernameDisplay) usernameDisplay.style.display = 'none';
             if (logoutButton) logoutButton.style.display = 'none';
             if (signButton) signButton.style.display = 'inline';
-            // Можно добавить код для перенаправления на страницу входа, если нужно
-            // window.location.href = '../registration/aut.html';
         });
     }
 
-    // Проверяем авторизацию и блокируем переход на ссылки, если пользователь не авторизован
     const servicesLink = document.getElementById('services-link');
     const worksLink = document.getElementById('works-link');
     const contactsLink = document.getElementById('contacts-link');
+    const servicesLink1 = document.getElementById('info-services');
+    const worksLink1 = document.getElementById('info-works');
+    const contactsLink1 = document.getElementById('info-contacts');
 
     function checkAuthorization(event) {
         if (!loggedInUser) {
             event.preventDefault();
             messageDiv.textContent = 'Пожалуйста, войдите в систему, чтобы перейти на эту страницу.';
             messageDiv.style.color = 'red';
-            document.body.appendChild(messageDiv);  // Добавить сообщение на страницу
-            // window.location.href = '../registration/aut.html';  // Перенаправление на страницу авторизации, если нужно
+            document.body.appendChild(messageDiv);  
+            
         }
     }
 
     servicesLink?.addEventListener('click', checkAuthorization);
     worksLink?.addEventListener('click', checkAuthorization);
     contactsLink?.addEventListener('click', checkAuthorization);
+    servicesLink1?.addEventListener('click', checkAuthorization);
+    worksLink1?.addEventListener('click', checkAuthorization);
+    contactsLink1?.addEventListener('click', checkAuthorization);
 
     window.addEventListener('DOMContentLoaded', () => {
         displayContentBasedOnRole();
