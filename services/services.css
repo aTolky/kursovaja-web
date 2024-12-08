@@ -339,7 +339,9 @@ footer {
     margin-top: 20px;  
     text-align: center;  
 }
-
+.admin-only{
+    margin-top: 20px;
+}
 .admin-only-content h2 {
     color: #343a40;  
     margin-bottom: 15px;  
@@ -468,7 +470,9 @@ footer {
     .burger-menu {
         display: flex;
     }
-
+    .service-header{
+        font-size: 14px;
+    }
     .burger-menu.active .line:nth-child(1) {
         transform: rotate(45deg) translateY(8px);
     }
