@@ -530,8 +530,21 @@ button:hover {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 45%;
     box-sizing: border-box;
+    display: none;
+    animation: fadeIn 0.5s forwards;
+}
+.work-card.active {
+    display: block;
+    opacity: 1;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 .work-header{
     display: flex;
