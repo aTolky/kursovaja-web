@@ -6,24 +6,6 @@
     <link rel="stylesheet" href="works.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" ></script>
-<script>
-    ymaps.ready(init);
-    function init() {
-        var myMap = new ymaps.Map("map", {
-            center: [53.8945, 27.5477], 
-            zoom: 15
-        });
-
-        var myPlacemark = new ymaps.Placemark([53.8945, 27.5477], {
-            hintContent: 'Мое местоположение',
-            balloonContent: 'Я здесь!'
-        });
-
-        myMap.geoObjects.add(myPlacemark);
-    }
-</script>
     <title>Sensei Media</title>
 </head>
 <body>
@@ -68,7 +50,12 @@
 </div>
 
     <main>
-
+        <div class="admin-only" style="display: none;">
+            <h2 id="panel">Панель Администратора</h2>
+            <p id="dobro">Добро пожаловать в административный раздел. Здесь находятся важные данные и настройки.</p>
+            <button class="admin-button" id="admin-but">Управление пользователями</button>
+            <button class="admin-button" id="admin-nast">Настройки системы</button>
+        </div>
     </main>
     <footer class="footer">
         <div id="logo-section" class="logo-section">

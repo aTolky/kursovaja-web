@@ -360,6 +360,42 @@ footer {
     font-size: 60px;
     margin: 23px 0px 0px 0px;
 }
+
+.admin-only-content {
+    background-color: #f8f9fa;  
+    border: 1px solid #dee2e6; 
+    border-radius: 10px;  
+    padding: 20px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    margin-top: 20px;  
+    text-align: center;  
+}
+
+.admin-only-content h2 {
+    color: #343a40;  
+    margin-bottom: 15px;  
+}
+
+.admin-only-content p {
+    color: #6c757d;  
+    margin-bottom: 20px;  
+}
+
+.admin-button {
+    background: linear-gradient(to right, #fc3060, #ff3d1b);
+    color: white; 
+    border: none;  
+    padding: 10px 20px;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    margin: 10px;  
+    font-size: 16px;  
+}
+
+.admin-button:hover {
+    background: linear-gradient(to right, #ff2155, #ff3410);
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;

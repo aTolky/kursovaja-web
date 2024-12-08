@@ -7,23 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" ></script>
-<script>
-    ymaps.ready(init);
-    function init() {
-        var myMap = new ymaps.Map("map", {
-            center: [53.8945, 27.5477], 
-            zoom: 15
-        });
-
-        var myPlacemark = new ymaps.Placemark([53.8945, 27.5477], {
-            hintContent: 'Мое местоположение',
-            balloonContent: 'Я здесь!'
-        });
-
-        myMap.geoObjects.add(myPlacemark);
-    }
-</script>
     <title>Sensei Media</title>
 </head>
 <body>
@@ -45,7 +28,6 @@
         <span id="usernameDisplay" style="display: none;"></span>
         <button id="logout" class="call-buttonburger1" style="display: none;">Выход</button>
         <div id="message"></div> 
-        <div id="message"></div> 
         <button id="languageButton" class="call-buttonburger1" onclick="toggleLanguage()">Русский</button>
         <button id="themeButton" class="call-buttonburger1" onclick="toggleTheme()">Тема</button>
         <button id="call-button" class="call-button">Заказать звонок</button>
@@ -66,9 +48,208 @@
         <button id="register-button" class="modal-button">Регистрация</button>
     </div>
 </div>
-
     <main>
-
+        <section class="services">
+            <h1 id="services-title">НАШИ УСЛУГИ</h1>
+            <div id="service-cards" class="service-cards">
+                <div id="advertising-materials" class="service-card">
+                    <div id="advertising-header" class="service-header">РЕКЛАМНЫЕ МАТЕРИАЛЫ</div>
+                    <ul>
+                        <li id="layout-design">Верстка макетов</li>
+                        <li id="flyers">Флаеры</li>
+                        <li id="business-cards">Визитки</li>
+                        <li id="brochures">Брошюры</li>
+                        <li id="leaflets">Листовки</li>
+                    </ul>
+                    <div id="advertising-price" class="service-price">от 2000 руб.<strong id="advertising-price-value">2000 руб.</strong></div>
+                    <button id="advertising-button" class="service-button">Подробнее</button>
+                </div>
+                <div id="brand-design" class="service-card">
+                    <div id="brand-header" class="service-header">БРЕНД ДИЗАЙН</div>
+                    <ul>
+                        <li id="logos1">Логотипы</li>
+                        <li id="corporate-identity">Фирменный стиль</li>
+                        <li id="identity">Айдентика</li>
+                        <li id="brand-concept">Концепция бренда</li>
+                        <li id="guidelines">Гайдлайн</li>
+                    </ul>
+                    <div id="brand-price" class="service-price">от <strong id="brand-price-value">3000 руб.</strong></div>
+                    <button id="brand-button" class="service-button">Подробнее</button>
+                </div>
+                <div id="signage-design" class="service-card">
+                    <div id="signage-header" class="service-header">ДИЗАЙН ВЫВЕСОК И РЕКЛАМЫ</div>
+                    <ul>
+                        <li id="sign-design">Дизайн вывесок</li>
+                        <li id="photo-attachments">Фотопривязки</li>
+                        <li id="rollups">Роллапы</li>
+                    </ul>
+                    <div id="signage-price" class="service-price">от <strong id="signage-price-value">3000 руб.</strong></div>
+                    <button id="signage-button" class="service-button">Подробнее</button>
+                </div>
+                <div id="digital-design" class="service-card">
+                    <div id="digital-header" class="service-header">DIGITAL ДИЗАЙН</div>
+                    <ul>
+                        <li id="web-design">WEB дизайн</li>
+                        <li id="creative-ads">Креативы для рекламы</li>
+                        <li id="presentations">Презентации</li>
+                    </ul>
+                    <div id="digital-price" class="service-price">от <strong id="digital-price-value">5000 руб.</strong></div>
+                    <button id="digital-button" class="service-button">Подробнее</button>
+                </div>
+                <div id="smm" class="service-card">
+                    <div id="smm-header" class="service-header">SMM</div>
+                    <ul>
+                        <li id="instagram-stories">Stories Instagram</li>
+                        <li id="instagram-posts">Post Instagram</li>
+                        <li id="account-design">Оформление аккаунта</li>
+                        <li id="advertising-creatives">Рекламные креативы</li>
+                        <li id="group-design">Оформление группы</li>
+                    </ul>
+                    <div id="smm-price" class="service-price">от <strong id="smm-price-value">1500 руб.</strong></div>
+                    <button id="smm-button" class="service-button">Подробнее</button>
+                </div>
+                <!-- Новые блоки -->
+                <div id="content-writing" class="service-card">
+                    <div id="content-header" class="service-header">КОПИРАЙТИНГ</div>
+                    <ul>
+                        <li id="articles">Написание статей</li>
+                        <li id="blog-posts">Блог посты</li>
+                        <li id="product-descriptions">Описания товаров</li>
+                        <li id="social-media-content">Контент для соцсетей</li>
+                        <li id="seo-content">SEO контент</li>
+                    </ul>
+                    <div id="content-price" class="service-price">от <strong id="content-price-value">1500 руб.</strong></div>
+                    <button id="content-button" class="service-button">Подробнее</button>
+                </div>
+                <div id="video-production" class="service-card">
+                    <div id="video-header" class="service-header">ВИДЕОПРОДУКЦИЯ</div>
+                    <ul>
+                        <li id="video-shooting">Видеосъемка</li>
+                        <li id="video-editing">Монтаж видео</li>
+                        <li id="animation">Анимация</li>
+                        <li id="motion-graphics">Моушн графика</li>
+                        <li id="voice-over">Озвучивание</li>
+                    </ul>
+                    <div id="video-price" class="service-price">от <strong id="video-price-value">5000 руб.</strong></div>
+                    <button id="video-button" class="service-button">Подробнее</button>
+                </div>
+                <div id="graphic-design" class="service-card">
+                    <div id="graphic-header" class="service-header">ГРАФИЧЕСКИЙ ДИЗАЙН</div>
+                    <ul>
+                        <li id="logo-design">Дизайн логотипов</li>
+                        <li id="branding">Брендинг</li>
+                        <li id="print-design">Печатный дизайн</li>
+                        <li id="infographics">Инфографика</li>
+                        <li id="illustrations">Иллюстрации</li>
+                    </ul>
+                    <div id="graphic-price" class="service-price">от <strong id="graphic-price-value">3000 руб.</strong></div>
+                    <button id="graphic-button" class="service-button">Подробнее</button>
+                </div>
+                <div id="web-development" class="service-card">
+                    <div id="web-dev-header" class="service-header">ВЕБ-РАЗРАБОТКА</div>
+                    <ul>
+                        <li id="website-creation">Создание сайтов</li>
+                        <li id="ecommerce">Интернет-магазины</li>
+                        <li id="web-applications">Веб-приложения</li>
+                        <li id="cms-integration">Интеграция CMS</li>
+                        <li id="website-maintenance">Поддержка сайтов</li>
+                    </ul>
+                    <div id="web-dev-price" class="service-price">от <strong id="web-dev-price-value">10000 руб.</strong></div>
+                    <button id="web-dev-button" class="service-button">Подробнее</button>
+                </div>
+                <div id="seo-services" class="service-card">
+                    <div id="seo-header" class="service-header">SEO УСЛУГИ</div>
+                    <ul>
+                        <li id="site-audit">Аудит сайта</li>
+                        <li id="on-page-seo">On-Page SEO</li>
+                        <li id="off-page-seo">Off-Page SEO</li>
+                        <li id="keyword-research">Анализ ключевых слов</li>
+                        <li id="seo-reporting">SEO отчетность</li>
+                    </ul>
+                    <div id="seo-price" class="service-price">от <strong id="seo-price-value">7000 руб.</strong></div>
+                    <button id="seo-button" class="service-button">Подробнее</button>
+                </div>
+                <div id="pr-services" class="service-card">
+                    <div id="pr-header" class="service-header">PR УСЛУГИ</div>
+                    <ul>
+                        <li id="press-releases">Пресс-релизы</li>
+                        <li id="media-contacts">Контакты со СМИ</li>
+                        <li id="event-management">Организация мероприятий</li>
+                        <li id="influencer-outreach">Работа с инфлюенсерами</li>
+                        <li id="crisis-management">Кризисное управление</li>
+                    </ul>
+                    <div id="pr-price" class="service-price">от <strong id="pr-price-value">6000 руб.</strong></div>
+                    <button id="pr-button" class="service-button">Подробнее</button>
+                </div>
+                <div id="it-support" class="service-card">
+                    <div id="it-header" class="service-header">IT ПОДДЕРЖКА</div>
+                    <ul>
+                        <li id="system-setup">Настройка систем</li>
+                        <li id="network-setup">Настройка сетей</li>
+                        <li id="software-installation">Установка ПО</li>
+                        <li id="data-backup">Резервное копирование данных</li>
+                        <li id="tech-support">Техническая поддержка</li>
+                    </ul>
+                    <div id="it-price" class="service-price">от <strong id="it-price-value">2500 руб.</strong></div>
+                    <button id="it-button" class="service-button">Подробнее</button>
+                </div>
+                <div id="consulting-services" class="service-card">
+                    <div id="consulting-header" class="service-header">КОНСУЛЬТАЦИОННЫЕ УСЛУГИ</div>
+                    <ul>
+                        <li id="business-consulting">Бизнес-консалтинг</li>
+                        <li id="marketing-strategy">Маркетинговая стратегия</li>
+                        <li id="financial-planning">Финансовое планирование</li>
+                        <li id="hr-consulting">HR-консалтинг</li>
+                        <li id="legal-advice">Юридическая консультация</li>
+                    </ul>
+                    <div id="consulting-price" class="service-price">от <strong id="consulting-price-value">8000 руб.</strong></div>
+                    <button id="consulting-button" class="service-button">Подробнее</button>
+                </div>
+                <div id="event-planning" class="service-card">
+                    <div id="event-header" class="service-header">ОРГАНИЗАЦИЯ МЕРОПРИЯТИЙ</div>
+                    <ul>
+                        <li id="corporate-events">Корпоративные мероприятия</li>
+                        <li id="weddings">Свадьбы</li>
+                        <li id="conferences">Конференции</li>
+                        <li id="product-launches">Запуски продуктов</li>
+                        <li id="exhibitions">Выставки</li>
+                    </ul>
+                    <div id="event-price" class="service-price">от <strong id="event-price-value">10000 руб.</strong></div>
+                    <button id="event-button" class="service-button">Подробнее</button>
+                </div>
+                <div id="photography" class="service-card">
+                    <div id="photography-header" class="service-header">ФОТОГРАФИЯ</div>
+                    <ul>
+                        <li id="portrait-photography">Портретная съемка</li>
+                        <li id="event-photography">Съемка мероприятий</li>
+                        <li id="product-photography">Съемка товаров</li>
+                        <li id="commercial-photography">Коммерческая съемка</li>
+                        <li id="editing-services">Услуги редактирования</li>
+                    </ul>
+                    <div id="photography-price" class="service-price">от <strong id="photography-price-value">3000 руб.</strong></div>
+                    <button id="photography-button" class="service-button">Подробнее</button>
+                </div>
+                <div id="translation-services" class="service-card">
+                    <div id="translation-header" class="service-header">ПЕРЕВОДЧЕСКИЕ УСЛУГИ</div>
+                    <ul>
+                        <li id="document-translation">Перевод документов</li>
+                        <li id="website-translation">Перевод сайтов</li>
+                        <li id="technical-translation">Технический перевод</li>
+                        <li id="legal-translation">Юридический перевод</li>
+                        <li id="interpretation-services">Услуги устного перевода</li>
+                    </ul>
+                    <div id="translation-price" class="service-price">от <strong id="translation-price-value">2000 руб.</strong></div>
+                    <button id="translation-button" class="service-button">Подробнее</button>
+                </div>
+                    </div>
+                </section>
+                
+        <div class="admin-only" style="display: none;">
+            <h2 id="panel">Панель Администратора</h2>
+            <p id="dobro">Добро пожаловать в административный раздел. Здесь находятся важные данные и настройки.</p>
+            <button class="admin-button" id="admin-but">Управление пользователями</button>
+            <button class="admin-button" id="admin-nast">Настройки системы</button>
+        </div>
     </main>
     <footer class="footer">
         <div id="logo-section" class="logo-section">
