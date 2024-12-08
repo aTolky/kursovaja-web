@@ -179,11 +179,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function displayContentBasedOnRole() {
         loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser')); // Обновляем данные о вошедшем пользователе
-        if (loggedInUser) {
+        if (loggedInUser && usernameDisplay) {
             usernameDisplay.textContent = 'Welcome, ' + loggedInUser.nickname;
             usernameDisplay.style.display = 'inline';
-            logoutButton.style.display = 'inline';
-            signButton.style.display = 'none';
+            if (logoutButton) logoutButton.style.display = 'inline';
+            if (signButton) signButton.style.display = 'none';
 
             if (loggedInUser.role === 'admin') {
                 const adminBlocks = document.querySelectorAll('.admin-only');
@@ -218,11 +218,32 @@ document.addEventListener('DOMContentLoaded', () => {
     if (logoutButton) {
         logoutButton.addEventListener('click', () => {
             sessionStorage.removeItem('loggedInUser');
-            usernameDisplay.style.display = 'none';
-            logoutButton.style.display = 'none';
-            signButton.style.display = 'inline';
+            if (usernameDisplay) usernameDisplay.style.display = 'none';
+            if (logoutButton) logoutButton.style.display = 'none';
+            if (signButton) signButton.style.display = 'inline';
+            // Можно добавить код для перенаправления на страницу входа, если нужно
+            // window.location.href = '../registration/aut.html';
         });
     }
+
+    // Проверяем авторизацию и блокируем переход на ссылки, если пользователь не авторизован
+    const servicesLink = document.getElementById('services-link');
+    const worksLink = document.getElementById('works-link');
+    const contactsLink = document.getElementById('contacts-link');
+
+    function checkAuthorization(event) {
+        if (!loggedInUser) {
+            event.preventDefault();
+            messageDiv.textContent = 'Пожалуйста, войдите в систему, чтобы перейти на эту страницу.';
+            messageDiv.style.color = 'red';
+            document.body.appendChild(messageDiv);  // Добавить сообщение на страницу
+            // window.location.href = '../registration/aut.html';  // Перенаправление на страницу авторизации, если нужно
+        }
+    }
+
+    servicesLink?.addEventListener('click', checkAuthorization);
+    worksLink?.addEventListener('click', checkAuthorization);
+    contactsLink?.addEventListener('click', checkAuthorization);
 
     window.addEventListener('DOMContentLoaded', () => {
         displayContentBasedOnRole();

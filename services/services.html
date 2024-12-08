@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="services.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" ></script>
+<script>
+    ymaps.ready(init);
+    function init() {
+        var myMap = new ymaps.Map("map", {
+            center: [53.8945, 27.5477], 
+            zoom: 15
+        });
+
+        var myPlacemark = new ymaps.Placemark([53.8945, 27.5477], {
+            hintContent: 'Мое местоположение',
+            balloonContent: 'Я здесь!'
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+    }
+</script>
+    <title>Sensei Media</title>
+</head>
+<body>
+    <header id="header" class="header">
+        <div id="logo" class="logo">
+            <img src="../image/logo.png" alt="SM">
+        </div>
+        <nav id="nav-links" class="nav-links">
+            <a id="home-link" href="../main/main.html">Главная</a>
+            <a id="services-link" href="../services/services.html">Услуги</a>
+            <a id="works-link" href="../works/works.html">Наши работы</a>
+            <a id="contacts-link" href="../contacts/contacts.html">Контакты</a>
+        </nav>
+        <div id="burger-menu" class="burger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <span id="usernameDisplay" style="display: none;"></span>
+        <button id="logout" class="call-buttonburger1" style="display: none;">Выход</button>
+        <div id="message"></div> 
+        <div id="message"></div> 
+        <button id="languageButton" class="call-buttonburger1" onclick="toggleLanguage()">Русский</button>
+        <button id="themeButton" class="call-buttonburger1" onclick="toggleTheme()">Тема</button>
+        <button id="call-button" class="call-button">Заказать звонок</button>
+    </header>    
+    <div id="mobile-nav" class="mobile-nav">
+        <a id="home-link1" href="../main/main.html">Главная</a>
+        <a id="services-link1" href="../services/services.html">Услуги</a>
+        <a id="works-link1" href="../works/works.html">Наши работы</a>
+        <a id="contacts-link1" href="../contacts/contacts.html">Контакты</a>              
+        <button id="call-buttonburger" class="call-buttonburger">Заказать звонок</button>
+    </div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="dei">Выберите действие</h2>
+        <button id="login-button" class="modal-button">Авторизация</button>
+        <button id="register-button" class="modal-button">Регистрация</button>
+    </div>
+</div>
+
+    <main>
+
+    </main>
+    <footer class="footer">
+        <div id="logo-section" class="logo-section">
+            <img src="../image/logo.png" alt="Sensei Media">
+            <p id="privacy-policy">Политика конфиденциальности</p>
+            <a href="#" id="feedback-link" class="feedback-button">Обратная связь</a>
+        </div>
+        <div id="information" class="information">
+            <h3 id="information-title">ИНФОРМАЦИЯ</h3>
+            <ul>
+                <li id="info-home"><a href="#">Главная</a></li>
+                <li id="info-services"><a href="#">Услуги</a></li>
+                <li id="info-works"><a href="#">Наши работы</a></li>
+                <li id="info-contacts"><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <div id="services" class="services">
+            <h3 id="services-title1">УСЛУГИ</h3>
+            <ul>
+                <li id="service-online-ads"><a href="#">Реклама в интернете</a></li>
+                <li id="service-sign-design"><a href="#">Дизайн вывесок и рекламы</a></li>
+                <li id="service-tilda-design"><a href="#">Дизайн сайтов на Тильде</a></li>
+                <li id="service-smm"><a href="#">СММ</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <div class="footer-bottom">
+        <p  id="footer-rights">© 2021 Все права защищены</p>
+    </div>
+    <script src="../general/burger.js"></script>
+    <script src="../general/translation.js"></script>
+    <script src="../general/tema.js"></script>
+    <script src="../general/modal.js"></script>
+    <script src="../registration/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,376 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F7F6FF;
+}
+body.dark {
+    background-color: #232325; 
+    color: #fff;
+  }
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+.dark .header{
+    background-color: #000; 
+    color: #fff;
+}
+.dark .nav-links a{
+    color: #fff;
+}
+.dark .logo img {
+    filter: invert(1);
+}
+.dark .call-button {
+    background: linear-gradient(to right, #c53653, #6e1f11);
+}
+.dark .call-buttonburger1{
+    background: linear-gradient(to right, #c53653, #6e1f11);
+}
+.dark .text-content h1{
+    color: #fff;
+}
+.dark .text-content h2{
+    color: #fff;
+}
+.dark .text-content p{
+    color: #fff;
+}
+.dark .text-content .buttons a {
+    background-color: #385363;
+}
+.dark .promo-block{
+    background-color: #000; 
+    color: #fff;
+}
+.dark .promo-block h1 {
+    color: #fff;
+}
+.dark .promo-item .highlight {
+    color: #fff;
+}
+.dark .services h1 {
+    color: #fff;
+}
+.dark .service-card{
+    background-color: #000; 
+    color: #fff;
+}
+.dark .service-header{
+    background-color: #385363;
+}
+.dark .service-card ul li {
+    color: #fff;
+}
+.dark .service-price {
+    color: #fff;
+}
+.dark .consultation-form h1 {
+    color: #fff;
+}
+.dark .consultation-form p {
+    color: #fff;
+}
+.dark .form-group label {
+    color: #fff;
+}
+.dark .service-button  {
+    background: linear-gradient(to right, #c53653, #6e1f11);
+}
+.dark .consultation button  {
+    background: linear-gradient(to right, #c53653, #6e1f11);
+}
+.dark footer {
+    background-color: #000; 
+    color: #fff;
+}
+.dark footer img {
+    filter: invert(1);
+}
+.dark .feedback-button{
+    background: linear-gradient(to right, #c53653, #6e1f11);
+}
+.dark .work-card{
+    background-color: #000; 
+    color: #fff;
+}
+.dark .work-results{
+    background-color: #232325; 
+    color: #fff;
+}
+.dark .work-card p {
+    color: #fff;
+}
+.dark .result strong {
+    color: #fff;
+}
+.dark .result span {
+    color: #fff;
+}
+.dark .modal-content{
+    background-color: #232325; 
+    color: #fff;
+}
+.dark .burger-menu .line {
+    background-color: #fff;
+}
+.dark .mobile-nav{
+    background-color: #232325; 
+}
+.dark .mobile-nav a{
+    color: #fff;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100%;
+    margin-right: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 21px;
+}
+
+.call-button {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger-menu .line {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.call-buttonburger {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 21px;
+    width: 40%;
+}
+.call-buttonburger1{
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.mobile-nav a {
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 21px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+footer {
+    background-color: #fff;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-top: 1px solid #ddd;
+}
+
+.footer div {
+    flex: 1;
+}
+
+.footer .logo-section p {
+    margin: 10px 0;
+}
+
+.footer .logo-section .feedback-button {
+    display: inline-block;
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.footer h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 5px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-bottom {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    margin-top: auto;
+}
+#footer-rights{
+    margin: 0;
+}
+/* Модальное окно */
+.modal {
+    display: none; /* По умолчанию скрыто */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Содержимое модального окна */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-button {
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+}
+
+.modal-button:hover {
+    background: linear-gradient(to right, #fc3060, #ff3d1b);
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .burger-menu.active .line:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+    
+    .burger-menu.active .line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .burger-menu.active .line:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+    
+    .mobile-nav.active {
+        display: flex;
+    }
+    .call-button{
+        display: none;
+    }
+    footer{
+        flex-wrap: wrap;
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 640px){ 
+    footer{
+        padding: 40px 5px;
+        flex-direction: column;
+    }
+    .call-buttonburger{
+        width: 80%;
+    }
+    .logo-section img{
+        width: 100%;
+    }
+}
