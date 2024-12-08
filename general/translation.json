@@ -213,7 +213,18 @@
         "interpretation-services": "Interpretation Services",
         "translation-price": "from",
         "translation-price-value": "2000 rub.",
-        "translation-button": "More details"
+        "translation-button": "More details",
+                "ont": "Our contacts",
+                "example1-description": "Tesla, Inc. is an American company specializing in the production of electric vehicles, battery energy storage, and solar panels. Founded by Elon Musk, the company aims to accelerate the world's transition to sustainable energy.",
+                "example1-result-1-description": "increase in website visits",
+                "example1-result-2-description": "increase in sales",
+                "example1-result-3-description": "decrease in advertising cost",
+                "example1-systems-title": "SYSTEMS:",
+                "example2-description": "Microsoft Corporation is one of the largest technology companies in the world, founded by Bill Gates and Paul Allen. Microsoft develops, manufactures, licenses, and supports software products and services.",
+                "example2-result-1-description": "increase in website visits",
+                "example2-result-2-description": "increase in sales",
+                "example2-result-3-description": "decrease in advertising cost",
+                "example2-systems-title": "SYSTEMS:"
     },
     "ru": {
         "home-link": "Главная",
@@ -429,6 +440,17 @@
         "interpretation-services": "Услуги устного перевода",
         "translation-price": "от",
         "translation-price-value": "2000 руб.",
-        "translation-button": "Подробнее"
+        "translation-button": "Подробнее",
+        "ont": "Наши контакты",
+        "example1-description": "Tesla, Inc. — это американская компания, специализирующаяся на производстве электромобилей, аккумуляторных батарей и солнечных панелей. Основанная Илоном Маском, компания стремится ускорить переход мира к устойчивой энергетике.",
+        "example1-result-1-description": "увеличение посещений сайта",
+        "example1-result-2-description": "увеличение продаж",
+        "example1-result-3-description": "снижение стоимости рекламы",
+        "example1-systems-title": "СИСТЕМЫ:",
+        "example2-description": "Microsoft Corporation — одна из крупнейших технологических компаний в мире, основанная Биллом Гейтсом и Полом Алленом. Microsoft занимается разработкой, производством, лицензированием и поддержкой программного обеспечения, а также предоставлением различных онлайн-услуг.",
+        "example2-result-1-description": "увеличение посещений сайта",
+        "example2-result-2-description": "увеличение продаж",
+        "example2-result-3-description": "снижение стоимости рекламы",
+        "example2-systems-title": "СИСТЕМЫ:"
     }
 }

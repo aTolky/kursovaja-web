@@ -510,41 +510,30 @@ button:hover {
     margin: 0 auto;
     text-align: center;
 }
-
-.blocking-works {
+.blocking-works{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Для позиционирования стрелок */
 }
-
 .works h1 {
     font-size: 32px;
     margin-bottom: 20px;
     margin-left: 30px;
     text-align: start;
 }
-
-#work-cards-container {
-    overflow: hidden;
-    width: 80%; /* Ширина контейнера */
-    position: relative;
-}
-
 .work-cards {
     display: flex;
-    transition: transform 0.5s ease;
+    justify-content: space-around;
+    gap: 20px;
 }
-
 .work-card {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 0 0 calc(100% / 3 - 20px); /* Изменяемая ширина */
+    width: 45%;
     box-sizing: border-box;
 }
-
-.work-header {
+.work-header{
     display: flex;
     align-items: center;
     gap: 10px;
@@ -553,19 +542,16 @@ button:hover {
     padding-right: 20px;
     padding-top: 20px;
 }
-
 .work-header img {
     width: 225px;
     height: 80px;
 }
-
 .work-card p {
     font-size: 18px;
     color: #555;
     margin: 10px 20px;
     text-align: start;
 }
-
 .work-results {
     margin-top: 20px;
     text-align: left;
@@ -573,22 +559,18 @@ button:hover {
     padding-left: 20px;
     padding-right: 20px;
 }
-
 .result {
     margin-bottom: 10px;
 }
-
 .result strong {
     font-size: 18px;
     color: #000;
 }
-
 .result span {
     display: block;
     font-size: 14px;
     color: #555;
 }
-
 .systems {
     margin-top: 20px;
     text-align: left;
@@ -596,44 +578,20 @@ button:hover {
     padding-right: 20px;
     padding-bottom: 20px;
 }
-
 .systems span {
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
 }
-
 .systems img {
     width: 100px;
     margin-right: 10px;
     vertical-align: middle;
 }
-
-.carousel-btn {
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-}
-
-#prev-btn {
-    left: 20px; /* Расстояние от левого края */
-}
-
-#next-btn {
-    right: 20px; /* Расстояние от правого края */
-}
-
 .pagination {
-    margin-top: 10px;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    margin-top: 20px;
 }
 
 .pagination .page {
@@ -641,8 +599,8 @@ button:hover {
     height: 10px;
     background-color: #ddd;
     border-radius: 50%;
+    margin: 0 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .pagination .page.active {
@@ -895,3 +853,66 @@ footer {
         width: 50%;
     }
 }
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes rotateIn {
+    from { transform: rotate(-90deg); opacity: 0; }
+    to { transform: rotate(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25%, 75% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+}
+
+@keyframes wobble {
+    0%, 100% { transform: translateX(0); }
+    15%, 45%, 75% { transform: translateX(-10px); }
+    30%, 60% { transform: translateX(10px); }
+}
+
+#main-container { animation: fadeIn 1.5s ease-in-out; }
+#promo-block { animation: zoomIn 1.5s ease-in-out; }
+#services-title { animation: slideInUp 1.5s ease-in-out; }
+.service-card:nth-child(1) { animation: slideInLeft 1.5s ease-in-out; }
+.service-card:nth-child(2) { animation: slideInRight 1.5s ease-in-out; }
+.service-card:nth-child(3) { animation: rotateIn 1.5s ease-in-out; }
+.service-card:nth-child(4) { animation: pulse 1.5s ease-in-out infinite alternate; }
+.service-card:nth-child(5) { animation: shake 1.5s ease-in-out; }
+#consultation-form { animation: slideInDown 1.5s ease-in-out; }
+#consultation-image { animation: wobble 1.5s ease-in-out; }

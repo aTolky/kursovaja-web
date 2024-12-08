@@ -364,7 +364,90 @@ footer {
 .admin-button:hover {
     background: linear-gradient(to right, #ff2155, #ff3410);
 }
-
+.works {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+}
+.blocking-works{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.works h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    text-align: start;
+}
+.work-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.work-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    box-sizing: border-box;
+}
+.work-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.work-header img {
+    width: 225px;
+    height: 80px;
+}
+.work-card p {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 20px;
+    text-align: start;
+}
+.work-results {
+    margin-top: 20px;
+    text-align: left;
+    background-color: #F7F6FF;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.result {
+    margin-bottom: 10px;
+}
+.result strong {
+    font-size: 18px;
+    color: #000;
+}
+.result span {
+    display: block;
+    font-size: 14px;
+    color: #555;
+}
+.systems {
+    margin-top: 20px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+.systems span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+.systems img {
+    width: 100px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -403,10 +486,25 @@ footer {
         padding: 40px 5px;
         flex-direction: column;
     }
+    .work-cards{
+        flex-direction: column;
+    }
+    .work-card{
+        width: 100%;
+    }
     .call-buttonburger{
         width: 80%;
     }
     .logo-section img{
         width: 100%;
+    }
+}
+@media (max-width: 400px){ 
+    .blocking-works{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .service-card{
+        width: 50%;
     }
 }
