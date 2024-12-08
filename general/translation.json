@@ -224,7 +224,9 @@
                 "example2-result-1-description": "increase in website visits",
                 "example2-result-2-description": "increase in sales",
                 "example2-result-3-description": "decrease in advertising cost",
-                "example2-systems-title": "SYSTEMS:"
+                "example2-systems-title": "SYSTEMS:",
+                        "mi": "We use cookies to improve your experience on our website. By continuing to use this site, you agree to our use of cookies.",
+        "accept-cookies": "Accept"
     },
     "ru": {
         "home-link": "Главная",
@@ -451,6 +453,8 @@
         "example2-result-1-description": "увеличение посещений сайта",
         "example2-result-2-description": "увеличение продаж",
         "example2-result-3-description": "снижение стоимости рекламы",
-        "example2-systems-title": "СИСТЕМЫ:"
+        "example2-systems-title": "СИСТЕМЫ:",
+        "mi": "Мы используем cookie-файлы для улучшения вашего опыта на нашем сайте. Продолжая использовать этот сайт, вы соглашаетесь с нашими условиями использования cookie-файлов.",
+        "accept-cookies": "Принять"
     }
 }
